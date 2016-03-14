@@ -1,4 +1,101 @@
+* {
+  box-sizing: border-box; }
+
 body {
-  background-color: #EDF4F6; }
+  /* background-color: $background; */
+  background: radial-gradient(ellipse farthest-corner at center top, #EDF4F6 40%, #D6E1E8 100%);
+  font-family: 'Lato', sans-serif; }
+
+html {
+  height: 100%; }
+
+.tab {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0; }
+  .tab > input[type="radio"] {
+    display: none; }
+  .tab > label {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    line-height: 30px;
+    position: absolute;
+    top: -42px;
+    left: 0;
+    color: white;
+    height: 50px;
+    background-color: #404040; }
+  .tab.signup > label {
+    right: 0;
+    left: auto; }
+  .tab .content {
+    padding: 20px;
+    display: none;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    z-index: 0; }
+  .tab > input[type="radio"]:checked + label {
+    border-top: 3px solid #f39264;
+    background-color: #1D1D1D; }
+  .tab > input[type="radio"]:checked + label + .content {
+    display: block;
+    z-index: 5; }
+
+.loginWrapper {
+  margin: 0 auto;
+  margin-top: 200px;
+  position: relative;
+  background-color: #1D1D1D;
+  border-radius: 10px;
+  height: 350px;
+  width: 400px;
+  display: block; }
+  .loginWrapper h1, .loginWrapper h2, .loginWrapper h3, .loginWrapper h4, .loginWrapper h5, .loginWrapper p {
+    color: white; }
+
+.content label {
+  color: white;
+  float: left;
+  width: 100%;
+  padding: 20px 0px; }
+.content input {
+  float: left;
+  width: 49%;
+  height: 50px;
+  padding: 20px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #EDF4F6;
+  margin-bottom: 10px; }
+  .content input:nth-child(2) {
+    float: right; }
+.content a {
+  color: white;
+  float: left;
+  text-decoration: none; }
+  .content a:hover {
+    text-decoration: underline; }
+.content .username, .content #password {
+  width: 100%; }
+
+.formLogin {
+  margin-top: 80px; }
+
+.button .submit {
+  width: 40% !important;
+  height: 50px;
+  float: right;
+  display: block;
+  background-color: #f39264;
+  border-radius: 3px;
+  color: white; }
+.button .submit:hover {
+  cursor: pointer; }
 
 /*# sourceMappingURL=app.css.map */
