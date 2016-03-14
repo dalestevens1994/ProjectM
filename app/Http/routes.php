@@ -25,7 +25,6 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
 
     Route::post('/createUser', 'AuthController@create');
 

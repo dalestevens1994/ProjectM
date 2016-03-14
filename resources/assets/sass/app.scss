@@ -22,6 +22,12 @@ html {
 	height: 100%;
 }
 
+/*-----------------------------------------
+
+LOGIN PAGE
+
+-----------------------------------------*/
+
 .tab {
 	position: relative;
 	width:100%;
@@ -94,6 +100,7 @@ html {
 	input {
 		float: left;
 		width: 49%;
+		display: flex;
 		height: 50px;
 		padding: 20px;
 		border: none;
@@ -104,6 +111,10 @@ html {
 		&:nth-child(2){
 			float: right;
 		}
+	}
+
+	.password {
+		justify-content: space-between;
 	}
 
 	a {
@@ -139,3 +150,65 @@ html {
 		cursor: pointer;
 	}
 }
+
+/*-----------------------------------------
+
+APP LAYOUT / NAVBAR
+
+-----------------------------------------*/
+
+#app-layout {
+	background-color: $background;
+}
+
+.navbar {
+	background-color: #f39264;
+	box-sizing: border-box;
+}
+
+#logo,
+#app-navbar-collapse ul li a{
+	color: $tertiary;
+}
+
+.icon-bar {
+	background-color: $tertiary !important;
+}
+
+#app-navbar-collapse {
+
+	ul li:hover {
+		background-color: #C67651;
+	}
+
+}
+
+/*-----------------------------------------
+
+HOME PAGE / OVERVIEW
+
+-----------------------------------------*/
+
+.panel-heading {
+	background-color: #f39264 !important;
+}
+
+.projects {
+
+	ul {
+		padding: 0px;
+	}
+
+	li {
+		width: 100%;
+		height: 80px;
+		list-style: none;
+		text-align: center;
+		line-height: 78px;
+	}
+
+	li:hover {
+		background-color: $grey;
+	}
+}
+

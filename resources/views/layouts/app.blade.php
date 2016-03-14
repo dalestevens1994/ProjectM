@@ -14,16 +14,8 @@
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+    <link href="/css/app.css" rel="stylesheet" type="text/css">
 
-    <style>
-        body {
-            font-family: 'Lato';
-        }
-
-        .fa-btn {
-            margin-right: 6px;
-        }
-    </style>
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-default">
@@ -39,8 +31,8 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                <a class="navbar-brand" id="logo" href="{{ url('/home') }}">
+                    ProjectM
                 </a>
             </div>
 
@@ -48,6 +40,16 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/') }}">Projects</a></li>
+                    <li class="dropdown">
+                        <a href="{{ url('/') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Overview</a></li>
+                                <li><a href="#">Edit Account</a></li>
+                            </ul>
+                    </li>
+                    <li><a href="{{ url('/') }}">User Guide</a></li>
+                    <li><a href="{{ url('/') }}">About</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -59,7 +61,7 @@
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                                You are logged in as {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu" role="menu">

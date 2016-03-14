@@ -9,6 +9,11 @@ body {
 html {
   height: 100%; }
 
+/*-----------------------------------------
+
+LOGIN PAGE
+
+-----------------------------------------*/
 .tab {
   position: relative;
   width: 100%;
@@ -67,6 +72,7 @@ html {
 .content input {
   float: left;
   width: 49%;
+  display: flex;
   height: 50px;
   padding: 20px;
   border: none;
@@ -75,6 +81,8 @@ html {
   margin-bottom: 10px; }
   .content input:nth-child(2) {
     float: right; }
+.content .password {
+  justify-content: space-between; }
 .content a {
   color: white;
   float: left;
@@ -97,5 +105,46 @@ html {
   color: white; }
 .button .submit:hover {
   cursor: pointer; }
+
+/*-----------------------------------------
+
+APP LAYOUT / NAVBAR
+
+-----------------------------------------*/
+#app-layout {
+  background-color: #EDF4F6; }
+
+.navbar {
+  background-color: #f39264;
+  box-sizing: border-box; }
+
+#logo,
+#app-navbar-collapse ul li a {
+  color: #1D1D1D; }
+
+.icon-bar {
+  background-color: #1D1D1D !important; }
+
+#app-navbar-collapse ul li:hover {
+  background-color: #C67651; }
+
+/*-----------------------------------------
+
+HOME PAGE / OVERVIEW
+
+-----------------------------------------*/
+.panel-heading {
+  background-color: #f39264 !important; }
+
+.projects ul {
+  padding: 0px; }
+.projects li {
+  width: 100%;
+  height: 80px;
+  list-style: none;
+  text-align: center;
+  line-height: 78px; }
+.projects li:hover {
+  background-color: #D6E1E8; }
 
 /*# sourceMappingURL=app.css.map */
