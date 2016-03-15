@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-6 col-md-offset-1">
+        <div class="col-md-6 col-md-offset-1 panels">
             <div class="panel panel-default projects">
                 <div class="panel-heading">Active Projects</div>
 
@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 panels">
             <div class="panel panel-default manage">
                 <div class="panel-heading">Manage</div>
 
@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 panels">
             <div class="panel panel-default manage">
                 <div class="panel-heading">Account</div>
 

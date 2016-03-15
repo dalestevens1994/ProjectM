@@ -25,17 +25,10 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
-
-    Route::post('/createUser', 'AuthController@create');
-
-	Route::get('/', function () {
-    	return view('welcome');
-	});
-
+   Route::post('/login',   'AuthController@create');
 });
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
-
-    Route::get('/home', 'HomeController@index');
+    Route::get('/', 'HomeController@index');
 });

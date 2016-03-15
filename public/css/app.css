@@ -2,8 +2,6 @@
   box-sizing: border-box; }
 
 body {
-  /* background-color: $background; */
-  background: radial-gradient(ellipse farthest-corner at center top, #EDF4F6 40%, #D6E1E8 100%);
   font-family: 'Lato', sans-serif; }
 
 html {
@@ -112,21 +110,25 @@ APP LAYOUT / NAVBAR
 
 -----------------------------------------*/
 #app-layout {
-  background-color: #EDF4F6; }
+  background-color: #E6E6E6; }
 
 .navbar {
-  background-color: #f39264;
-  box-sizing: border-box; }
+  background-color: #34495E;
+  box-sizing: border-box;
+  border: none !important;
+  border-radius: 0px; }
 
 #logo,
 #app-navbar-collapse ul li a {
-  color: #1D1D1D; }
+  color: #6d8295; }
 
 .icon-bar {
   background-color: #1D1D1D !important; }
 
 #app-navbar-collapse ul li:hover {
-  background-color: #C67651; }
+  background-color: #FE3600; }
+#app-navbar-collapse ul li a:hover {
+  color: white; }
 
 /*-----------------------------------------
 
@@ -134,7 +136,11 @@ HOME PAGE / OVERVIEW
 
 -----------------------------------------*/
 .panel-heading {
-  background-color: #f39264 !important; }
+  color: #FFFFFF !important;
+  background-color: #FE3600 !important; }
+
+.panel {
+  border: none !important; }
 
 .projects ul {
   padding: 0px; }

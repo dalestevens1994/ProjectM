@@ -13,8 +13,6 @@ $grey: #D6E1E8;
 }
 
 body {
-	/* background-color: $background; */
-	background: radial-gradient(ellipse farthest-corner at center top, $background 40%, $grey 100%);
 	font-family: 'Lato', sans-serif;
 }
 
@@ -158,17 +156,19 @@ APP LAYOUT / NAVBAR
 -----------------------------------------*/
 
 #app-layout {
-	background-color: $background;
+	background-color: #E6E6E6;
 }
 
 .navbar {
-	background-color: #f39264;
+	background-color: #34495E;
 	box-sizing: border-box;
+	border: none !important;
+	border-radius: 0px;
 }
 
 #logo,
 #app-navbar-collapse ul li a{
-	color: $tertiary;
+	color: #6d8295;
 }
 
 .icon-bar {
@@ -178,7 +178,11 @@ APP LAYOUT / NAVBAR
 #app-navbar-collapse {
 
 	ul li:hover {
-		background-color: #C67651;
+		background-color: #FE3600;
+	}
+
+	ul li a:hover {
+		color: white;
 	}
 
 }
@@ -190,7 +194,13 @@ HOME PAGE / OVERVIEW
 -----------------------------------------*/
 
 .panel-heading {
-	background-color: #f39264 !important;
+	color: #FFFFFF !important;
+	background-color: #FE3600 !important;
+}
+
+ 
+.panel {
+	border: none !important;
 }
 
 .projects {
