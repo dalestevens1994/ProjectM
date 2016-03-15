@@ -52,7 +52,6 @@ LOGIN PAGE
 		color: white;
 		height: 50px;
 		background-color: #404040;
-
 	}
 
 	&.signup > label {
@@ -90,22 +89,13 @@ LOGIN PAGE
 
 .content {
 
-	label {
-		color: white;
-		float: left;
-		width: 100%;
-		padding: 20px 0px;
-	}
-
 	input {
-		float: left;
-		width: 49%;
-		display: flex;
+		width: 100%;
 		height: 50px;
 		border: none;
 		box-sizing: border-box;
 		background-color: $white;
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 
 		&:nth-child(2){
 			float: right;
@@ -113,7 +103,12 @@ LOGIN PAGE
 	}
 
 	.password {
-		justify-content: space-between;
+		width: 48%;
+		float: left;
+	}
+
+	.form-group {
+		margin-bottom: 10px !important;
 	}
 
 	a {
@@ -126,10 +121,8 @@ LOGIN PAGE
 		}
 	}
 
-	.username, #password{
-		width: 100%;
-	}
 }
+
 
 .formLogin {
 	margin-top: 80px;
