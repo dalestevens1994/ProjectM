@@ -2,11 +2,11 @@
 @import "panels.scss";
 @import "buttons.scss";
 
-$primary: #3E72E0;
-$secondary: #00C0B5;
-$tertiary: #1D1D1D;
-$background: #EDF4F6;
-$grey: #D6E1E8;
+$primary: #009CE1;
+$secondary: #E6E6E6;
+$tertiary: #232A2D;
+$background: #303540;
+$white: #FFFFFF;
 
 * {
 	box-sizing: border-box;
@@ -68,8 +68,8 @@ LOGIN PAGE
 	}
 
 	> input[type="radio"]:checked + label {
-		border-top: 3px solid #f39264;
-		background-color: $tertiary;
+		border-top: 3px solid #009CE1;
+		background-color: #303540;
 	}
 
 	> input[type="radio"]:checked + label + .content {
@@ -83,7 +83,7 @@ LOGIN PAGE
 	margin: 0 auto;
 	margin-top: 200px;
 	position: relative;
-	@include panel($tertiary, 350px, 400px);
+	@include panel(#303540, 350px, 400px);
 }
 
 .content {
@@ -100,7 +100,6 @@ LOGIN PAGE
 		width: 49%;
 		display: flex;
 		height: 50px;
-		padding: 20px;
 		border: none;
 		box-sizing: border-box;
 		background-color: $background;
@@ -141,7 +140,7 @@ LOGIN PAGE
 		height: 50px;
 		float: right;
 		display: block;
-		@include buttons(#f39264, 3px, white);
+		@include buttons(#009CE1, 3px, white);
 	}
 
 	.submit:hover {
@@ -156,13 +155,13 @@ APP LAYOUT / NAVBAR
 -----------------------------------------*/
 
 #app-layout {
-	background-color: #E6E6E6;
+	background-color: $secondary;
 }
 
 .navbar {
-	background-color: #34495E;
+	background-color: $background;
 	box-sizing: border-box;
-	border: none !important;
+	border-bottom: 3px solid $primary;
 	border-radius: 0px;
 }
 
@@ -171,14 +170,10 @@ APP LAYOUT / NAVBAR
 	color: #6d8295;
 }
 
-.icon-bar {
-	background-color: $tertiary !important;
-}
-
 #app-navbar-collapse {
 
 	ul li:hover {
-		background-color: #FE3600;
+		background-color: $primary;
 	}
 
 	ul li a:hover {
@@ -195,12 +190,14 @@ HOME PAGE / OVERVIEW
 
 .panel-heading {
 	color: #FFFFFF !important;
-	background-color: #FE3600 !important;
+	background-color: $background !important;
+	border-bottom: 3px solid $primary !important;
 }
 
  
 .panel {
 	border: none !important;
+	box-shadow: 4px 4px 2px -2px rgba(0,0,0,0.4);
 }
 
 .projects {
@@ -218,7 +215,7 @@ HOME PAGE / OVERVIEW
 	}
 
 	li:hover {
-		background-color: $grey;
+		background-color: $white;
 	}
 }
 
