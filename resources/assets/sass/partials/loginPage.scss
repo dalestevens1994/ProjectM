@@ -1,0 +1,120 @@
+/*-----------------------------------------
+
+LOGIN PAGE
+
+-----------------------------------------*/
+
+.tab {
+  position: relative;
+  width:100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  > input[type="radio"] {
+    display: none;
+  }
+
+  > label {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    line-height: 30px;
+    position: absolute;
+    top: -42px;
+    left: 0;
+    color: white;
+    height: 50px;
+    background-color: #404040;
+  }
+
+  &.signup > label {
+    right: 0;
+    left: auto;
+  }
+
+  .content {
+    padding: 20px;
+    display: none;
+    width : 100%;
+    height: 300px;
+    position: relative;
+    z-index: 0;
+  }
+
+  > input[type="radio"]:checked + label {
+    border-top: 3px solid #009CE1;
+    background-color: #303540;
+  }
+
+  > input[type="radio"]:checked + label + .content {
+    display: block;
+    z-index: 5;
+  }
+
+}
+
+.loginWrapper {
+  margin: 0 auto;
+  margin-top: 200px;
+  position: relative;
+  @include panel(#303540, 350px, 400px);
+}
+
+.content {
+
+  input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    box-sizing: border-box;
+    background-color: $white;
+    margin-bottom: 5px;
+
+    &:nth-child(2){
+      float: right;
+    }
+  }
+
+  .password {
+    width: 48%;
+    float: left;
+  }
+
+  .form-group {
+    margin-bottom: 10px !important;
+  }
+
+  a {
+    color: white;
+    float: left;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}
+
+
+.formLogin {
+  margin-top: 80px;
+}
+
+.button {
+
+  .submit {
+    width: 40% !important;
+    height: 50px;
+    float: right;
+    display: block;
+    @include buttons(#009CE1, 3px, white, none);
+  }
+
+  .submit:hover {
+    cursor: pointer;
+  }
+}

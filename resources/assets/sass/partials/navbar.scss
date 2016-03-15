@@ -1,0 +1,37 @@
+/*-----------------------------------------
+
+APP LAYOUT / NAVBAR
+
+-----------------------------------------*/
+
+.navbar {
+  background-color: $tertiary;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 3px solid $primary;
+  border-radius: 0px;
+}
+
+#logo {
+  color: white;
+}
+
+.dropdown {
+
+  ul li a {
+    color: #000000 !important;
+  }
+
+}
+
+#app-navbar-collapse {
+
+  ul li a {
+    color: white;
+  }
+
+  ul li:hover {
+    background-color: $background;
+  }
+
+}

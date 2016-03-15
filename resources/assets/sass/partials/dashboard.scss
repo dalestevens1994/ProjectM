@@ -1,0 +1,44 @@
+/*-----------------------------------------
+
+HOME PAGE / OVERVIEW
+
+-----------------------------------------*/
+
+.panel-heading {
+  color: #FFFFFF !important;
+  background-color: $background !important;
+  border-bottom: 3px solid $primary !important;
+}
+
+
+.panel {
+  border: none !important;
+  box-shadow: 4px 4px 2px -2px rgba(0,0,0,0.4);
+}
+
+.panel-body {
+  padding: 10px;
+  background-color: $background;
+  color: white;
+}
+
+
+.projects {
+
+  ul {
+    padding: 0px;
+  }
+
+  li {
+    width: 100%;
+    height: 80px;
+    list-style: none;
+    text-align: center;
+    line-height: 78px;
+  }
+
+  li:hover {
+    background-color: $secondary;
+    cursor: pointer;
+  }
+}

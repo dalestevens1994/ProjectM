@@ -5,7 +5,7 @@ module.exports = function(grunt){
         sass: {
             dist: {
                 files: {
-                     "public/css/app.css" : "resources/assets/sass/app.scss"
+                     "public/css/app.css" : "resources/assets/sass/styles.scss"
                 }
             }
         },
@@ -13,13 +13,25 @@ module.exports = function(grunt){
         watch: {
             sass: {
                 files: 'resources/assets/sass/**/*.scss',
-                tasks: ['sass'],
-            },
+                tasks: ['sass_globbing', 'sass'],
+            }
+        },
+
+        sass_globbing: {
+            your_target: {
+                files: {
+                    'resources/assets/sass/_variable.scss': 'resources/assets/sass/_variables/**/*.scss',
+                    'resources/assets/sass/_mixin.scss': 'resources/assets/sass/_mixins/**/*.scss',
+                    'resources/assets/sass/external.scss': 'resources/assets/sass/external/**/*.scss',
+                    'resources/assets/sass/partials.scss': 'resources/assets/sass/partials/**/*.scss',
+                    'resources/assets/sass/styles.scss': 'resources/assets/sass/*.scss',
+                }
+            }
         }
 	});
 
 	grunt.loadNpmTasks("grunt-contrib-sass");
 	grunt.loadNpmTasks("grunt-contrib-watch");
-
-	grunt.registerTask('default', ["watch"])
+    grunt.loadNpmTasks('grunt-sass-globbing');
+	grunt.registerTask('default', ["watch"]);
 }

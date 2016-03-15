@@ -23,7 +23,7 @@
 
                 <div class="panel-body">
                     <ul>
-                        <li><a>Create Project</a></li>
+                        <li><a href="{{ url('/createProject') }}">Create Project</a></li>
                         <li><a>Edit Project</a></li>
                         <li><a>Delete Project</a></li>
                         <li><a>Assign Users</a></li>
