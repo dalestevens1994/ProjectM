@@ -1,5 +1,6 @@
-@mixin buttons($bcolor, $radius, $color){
+@mixin buttons($bcolor, $radius, $color, $border){
 	background-color: $bcolor;
 	border-radius: $radius;
 	color: $color;
+	border: $border;
 }

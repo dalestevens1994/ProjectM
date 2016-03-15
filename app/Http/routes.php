@@ -25,10 +25,23 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
-   Route::post('/login',   'AuthController@create');
+
+    Route::post('/login', 'AuthController@create');
+
+    Route::get('uikit', function () {
+        return view('uikit');
+    });
+
+    Route::get('createProject', function(){
+        return view('createProject');
+    });
+
 });
 
 Route::group(['middleware' => 'web'], function () {
+
     Route::auth();
+
     Route::get('/', 'HomeController@index');
+
 });
