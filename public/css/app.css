@@ -1,8 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Muli);
 * {
   box-sizing: border-box; }
 
 body {
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Muli', sans-serif; }
 
 html {
   height: 100%; }
@@ -74,7 +75,7 @@ LOGIN PAGE
   height: 50px;
   border: none;
   box-sizing: border-box;
-  background-color: #303540;
+  background-color: #FFFFFF;
   margin-bottom: 10px; }
   .content input:nth-child(2) {
     float: right; }
