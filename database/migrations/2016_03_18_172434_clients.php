@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ClientsTable extends Migration
+class Clients extends Migration
 {
     /**
      * Run the migrations.
@@ -17,8 +17,9 @@ class ClientsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('primary_contact');
+            $table->integer('secondary_contact');
             $table->integer('company_number');
-            $table->integer('company_vat');
+            $table->integer('vat_no');
         });
     }
 

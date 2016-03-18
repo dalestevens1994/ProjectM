@@ -26,6 +26,8 @@
 
 Route::group(['middleware' => ['web']], function () {
 
+    Route::post('/createClient', 'ClientController@create');
+
     Route::post('/login', 'AuthController@create');
 
     Route::get('uikit', function () {

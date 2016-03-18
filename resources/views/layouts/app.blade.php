@@ -12,9 +12,6 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
 
-    <!-- Styles -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
     <link href="/css/app.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -49,7 +46,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="{{ url('/') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Overview</a></li>
                                 <li><a href="#">Edit Account</a></li>
@@ -87,5 +84,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+
+            <!-- JQuery UI -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $( ".datepicker" ).datepicker({
+                changeMonth: true,
+                changeYear: true,
+                showButtonPanel: true
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $(".createClient").click(function(){
+                $("#form").slideDown();
+            });
+        });
+    </script>
+
 </body>
 </html>
