@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Client;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 use App\Http\Requests;
 
@@ -26,7 +27,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        //
+        return view('clients.create');
     }
 
     /**
@@ -39,24 +40,26 @@ class ClientController extends Controller
     {
         // Validate the data
         $this->validate($request, array(
-            'name'              => 'required',
-            'primary_contact'   => 'required',
-            'secondary_contact' => 'required',
-            'company_number'    => 'required',
-            'vat_no'            => 'required',
+            'name' => 'required|max:255',
+            'primary_contact' => 'required|integer',
+            'secondary_contact' => 'required|integer',
+            'company_number' => 'required|integer',
+            'vat_no' => 'required|integer'
         ));
 
-        // Store the data in the database
+        // Store the client in the database
         $client = new Client;
 
-        $client->name = $request->get('name');
-        $client->primary_contact = $request->get('primary_contact');
-        $client->secondary_contact = $request->get('secondary_contact');
-        $client->company_number = $request->get('company_number');
-        $client->vat_no = $request->get('vat_no');
+        $client->name = $request->name;
+        $client->primary_contact = $request->primary_contact;
+        $client->secondary_contact = $request->secondary_contact;
+        $client->company_number = $request->company_number;
+        $client->vat_no = $request->vat_no;
 
         $client->save();
 
+        // Redirect the user
+        return redirect()->route('clients.show', $client->id);
     }
 
     /**
@@ -67,7 +70,7 @@ class ClientController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**

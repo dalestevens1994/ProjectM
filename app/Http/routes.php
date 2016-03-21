@@ -26,16 +26,24 @@
 
 Route::group(['middleware' => ['web']], function () {
 
-    Route::post('/createClient', 'ClientController@create');
-
     Route::post('/login', 'AuthController@create');
 
     Route::get('uikit', function () {
         return view('uikit');
     });
 
-    Route::get('createProject', function(){
+    Route::get('CreateProject', function(){
         return view('createProject');
+    });
+
+    Route::resource('clients', 'ClientController');
+
+    Route::get('UserGuide', function(){
+        return view('userGuide');
+    });
+
+    Route::get('About', function(){
+        return view('about');
     });
 
 });

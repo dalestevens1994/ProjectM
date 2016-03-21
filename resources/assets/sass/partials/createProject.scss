@@ -18,7 +18,6 @@ select {
   -webkit-border-radius:3px;
   -webkit-appearance: none;
   border:0;
-  float: left;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -41,6 +40,8 @@ input, textarea {
 
 textarea {
   height: 200px;
+  max-width: 100%;
+  min-width: 100%;
 }
 
 label {
@@ -48,11 +49,10 @@ label {
   margin-bottom: 5px;
 }
 
-.panel {
-  padding: 10px;
+.projdets {
+  padding: 20px;
 }
 
 #form {
   display: none;
-  padding-top: 100px;
 }

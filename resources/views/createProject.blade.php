@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 panels">
-            <div class="panel panel-default projects">
+            <div class="panel panel-default projdets">
                 <H2>Project Details</H2>
                 <label>Project Name</label>
                 <input type="text">
@@ -20,10 +20,14 @@
 
                 <h2>Client</h2>
                 <select id="selectClient">
-                    <option>Please Select</option>
+                    <option selected>Select your client</option>
+                    <option>Client 1</option>
+                    <option>Client 2</option>
+                    <option>Client 3</option>
+                    <option>Client 4</option>
                 </select>
 
-                <form id="form" role="form" action="{{ url('/createClient') }}" method="POST">
+                <form id="form" role="form" action="{{ url('clients.store') }}" method="POST">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <label>Client Name</label>
                 <input type="text" name="name">

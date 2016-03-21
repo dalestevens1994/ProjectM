@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Clients extends Migration
+class CreateClientsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,14 @@ class Clients extends Migration
      */
     public function up()
     {
-        //clients core info
-        Schema::create('clients', function (Blueprint $table) {
+        Schema::create('clients', function (Blueprint $table){
             $table->increments('id');
             $table->string('name');
             $table->integer('primary_contact');
             $table->integer('secondary_contact');
             $table->integer('company_number');
             $table->integer('vat_no');
+            $table->timestamps();
         });
     }
 

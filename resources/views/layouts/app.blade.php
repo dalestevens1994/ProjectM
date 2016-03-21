@@ -41,8 +41,15 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ url('/createProject') }}">Create Project</a></li>
+                            <li><a href="{{ url('CreateProject') }}">Create Project</a></li>
                             <li><a href="#">Manage Projects</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clients <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ url('clients/create') }}">Create Client</a></li>
+                            <li><a href="{{ url('clients/index') }}">Manage Clients</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -52,8 +59,8 @@
                                 <li><a href="#">Edit Account</a></li>
                             </ul>
                     </li>
-                    <li><a href="{{ url('/') }}">User Guide</a></li>
-                    <li><a href="{{ url('/') }}">About</a></li>
+                    <li><a href="{{ url('/UserGuide') }}">User Guide</a></li>
+                    <li><a href="{{ url('/About') }}">About</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -97,12 +104,18 @@
                 showButtonPanel: true
             });
         });
-    </script>
 
-    <script>
         $(document).ready(function(){
             $(".createClient").click(function(){
                 $("#form").slideDown();
+                $(".createClient").toggle();
+            });
+
+            $("#selectClient").change(function() {
+                if ("#selectClient option:selected") {
+                    $("#form").slideUp();
+                    $(".createClient").toggle();
+                }
             });
         });
     </script>
