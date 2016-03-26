@@ -5836,6 +5836,16 @@ body {
 html {
   height: 100%; }
 
+.btn {
+  padding: 10px;
+  margin-left: 5px;
+  margin-top: 5px;
+  background-color: #009CE1;
+  color: white; }
+
+th, td {
+  text-align: center; }
+
 /*-----------------------------------------
 
 PROJECT DETAILS
@@ -5999,6 +6009,7 @@ LOGIN PAGE
 .button .submit {
   width: 40% !important;
   height: 50px;
+  margin-top: 10px;
   float: right;
   display: block;
   background-color: #009CE1;

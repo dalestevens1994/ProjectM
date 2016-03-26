@@ -6,8 +6,10 @@
         <div class="row">
             <div class="col-md-12 panels">
                 <div class="panel panel-default projdets">
+
                     <H1>Create New Client</H1>
                     <hr>
+                    @include('partials.messages')
                     {!! Form::open(array('route' => 'clients.store')) !!}
 
                         {{ Form::label('name', 'Client Name') }}
@@ -20,7 +22,7 @@
                         {{ Form::text('secondary_contact', null, array('class' => 'form-control')) }}
 
                         {{ Form::label('company_number', 'Company Number') }}
-                        {{ Form::text('secondary_contact', null, array('class' => 'form-control')) }}
+                        {{ Form::text('company_number', null, array('class' => 'form-control')) }}
 
                         {{ Form::label('vat_no', 'Vat No.') }}
                         {{ Form::text('vat_no', null, array('class' => 'form-control')) }}

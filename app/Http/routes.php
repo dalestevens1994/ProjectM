@@ -36,7 +36,10 @@ Route::group(['middleware' => ['web']], function () {
         return view('createProject');
     });
 
+    // RESTFUL resource
     Route::resource('clients', 'ClientController');
+
+    Route::resource('projects', 'ProjectController');
 
     Route::get('UserGuide', function(){
         return view('userGuide');

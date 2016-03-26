@@ -18,14 +18,15 @@
 
                 <hr>
 
+                @foreach ($client as $option)
+
                 <h2>Client</h2>
                 <select id="selectClient">
                     <option selected>Select your client</option>
-                    <option>Client 1</option>
-                    <option>Client 2</option>
-                    <option>Client 3</option>
-                    <option>Client 4</option>
+                    <option>{{ $option->name }}</option>
                 </select>
+
+                @endforeach
 
                 <form id="form" role="form" action="{{ url('clients.store') }}" method="POST">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">

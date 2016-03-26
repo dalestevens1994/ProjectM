@@ -109,6 +109,7 @@ LOGIN PAGE
   .submit {
     width: 40% !important;
     height: 50px;
+    margin-top: 10px;
     float: right;
     display: block;
     @include buttons(#009CE1, 3px, white, none);

@@ -70,7 +70,7 @@
                                 @endif
                             </div>
                             <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                                <input type="password" required validate="password" class="password" name="password_confirmation" placeholder="Confirm Password">
+                                <input style="float: right" type="password" required validate="password" class="password" name="password_confirmation" placeholder="Confirm Password">
                                 @if ($errors->has('password_confirmation'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password_confirmation') }}</strong>

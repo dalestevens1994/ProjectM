@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ProjectsTable extends Migration
+class CreateProjectsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -20,6 +20,7 @@ class ProjectsTable extends Migration
             $table->string('project_desc');
             $table->integer('client_id');
             $table->string('stub')->unique();
+            $table->timestamps();
         });
     }
 
