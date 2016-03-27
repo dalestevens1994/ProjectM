@@ -12,6 +12,7 @@ body {
 
 html {
 	height: 100%;
+	overflow-x: hidden;
 }
 
 .btn {
@@ -25,3 +26,213 @@ html {
 th, td{
 	text-align: center;
 }
+
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: 'Muli', sans-serif;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Muli:400,400italic,300italic,300);
+
+.sidebar {
+	width: 250px;
+	height: 100%;
+	background-color: #353535;
+	position: absolute;
+	position: fixed;
+	float: none;
+	overflow-y: scroll;
+}
+
+.top-bar {
+	width: 100%;
+	margin-left: 250px;
+	height: 50px;
+	border-bottom: 1px solid #E0E0E0;
+	background-color: white !important;
+	display: table;
+}
+
+#user {
+	display: table;
+	height: 50px;
+	padding: 0px 20px;
+	float: left;
+}
+
+#user p {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.top-bar a {
+	width: 60px;
+	height: 36px;
+	outline: 0;
+	border: 0;
+	color: white;
+	background-color: #009CE1;
+	border-radius: 3px;
+	float: left;
+	margin: 7px 0px;
+	text-align: center;
+	padding: 8px 0px;
+	text-decoration: none;
+}
+
+.top-bar a:hover {
+	background-color: #0089C4;
+}
+
+.burger-menu {
+	display: none;
+	color: white;
+	position: absolute;
+	right: 10px;
+	font-size: 32px;
+}
+
+.burger-menu:hover {
+	cursor: pointer;
+}
+
+.logo {
+	display: block;
+	background-color: transparent;
+	display: table;
+	height: 200px;
+	width: 100%;
+}
+
+h1 {
+	font-size: 36px;
+	display: table-cell;
+	vertical-align: middle;
+	color: white;
+	text-align: center;
+}
+
+.content {
+	width: 100% !important;
+	margin-left: 250px;
+	padding: 20px;
+	height: 100%;
+	background-color: white;
+}
+
+.sidebar span {
+	color: white;
+	height: 55px;
+	width: 100%;
+	display: block;
+	display: table;
+}
+
+.sidebar span h3 {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 40px;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+h3 {
+	font-weight: normal;
+	font-size: 18px;
+}
+
+.sidebar span:hover {
+	cursor: pointer;
+}
+
+.sidebar ul {
+	list-style: none;
+}
+
+.sidebar ul li {
+	height: 55px;
+	width: 100%;
+	display: table;
+}
+
+.sidebar ul li a {
+	display: table-cell;
+	vertical-align: middle;
+	text-decoration: none;
+	color: white;
+	padding-left: 40px;
+}
+
+.sidebar ul li:hover {
+	background-color: #3E3E3E;
+	border-right: 8px solid #009CE3;
+}
+
+.dropdownProjects,
+.dropdownClients,
+.dropdownAccount {
+	display: none;
+}
+
+.dropdownProjects li,
+.dropdownClients li,
+.dropdownAccount li {
+	width: 100%;
+	height: 35px;
+	background-color: #353535;
+}
+
+.dropdownProjects li:hover,
+.dropdownClients li:hover,
+.dropdownAccount li:hover {
+	border-right: 8px solid #009CE3;
+}
+
+.dropdownProjects li a,
+.dropdownClients li a,
+.dropdownAccount li a {
+	font-size: 13px;
+	padding-left: 70px !important;
+}
+
+@media only screen and (max-width: 959px){
+	.sidebar {
+		left: -200px;
+		transition: 0.5s;
+	}
+
+	.burger-menu {
+		display: block;
+	}
+
+	.content {
+		margin-left: 50px;
+		transition: 0.5s;
+	}
+
+	.top-bar {
+		margin-left: 50px;
+		transition: 0.5s;
+	}
+
+}
+
+.animation {
+	left: 0px;
+	transition: 0.5s;
+}
+
+.contentAnimation {
+	margin-left: 250px;
+	transition: 0.5s;
+}
+
+.topBarAnimation {
+	margin-left: 250px;
+	transition: 0.5s;
+}
+
+
+

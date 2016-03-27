@@ -16,81 +16,126 @@
 
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
+    {{--<nav class="navbar navbar-default">--}}
+        {{--<div class="container">--}}
+            {{--<div class="navbar-header">--}}
 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+                {{--<!-- Collapsed Hamburger -->--}}
+                {{--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">--}}
+                    {{--<span class="sr-only">Toggle Navigation</span>--}}
+                    {{--<span class="icon-bar"></span>--}}
+                    {{--<span class="icon-bar"></span>--}}
+                    {{--<span class="icon-bar"></span>--}}
+                {{--</button>--}}
 
-                <!-- Branding Image -->
-                <a class="navbar-brand" id="logo" href="{{ url('/home') }}">
-                    ProjectM
-                </a>
-            </div>
+                {{--<!-- Branding Image -->--}}
+                {{--<a class="navbar-brand" id="logo" href="{{ url('/home') }}">--}}
+                    {{--ProjectM--}}
+                {{--</a>--}}
+            {{--</div>--}}
 
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/') }}">Home</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ url('CreateProject') }}">Create Project</a></li>
-                            <li><a href="#">Manage Projects</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clients <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ route('clients.create') }}">Create Client</a></li>
-                            <li><a href="{{ route('clients.index') }}">Manage Clients</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Overview</a></li>
-                                <li><a href="#">Edit Account</a></li>
-                            </ul>
-                    </li>
-                    <li><a href="{{ url('/UserGuide') }}">User Guide</a></li>
-                    <li><a href="{{ url('/About') }}">About</a></li>
-                </ul>
+            {{--<div class="collapse navbar-collapse" id="app-navbar-collapse">--}}
+                {{--<!-- Left Side Of Navbar -->--}}
+                {{--<ul class="nav navbar-nav">--}}
+                    {{--<li><a href="{{ url('/') }}">Home</a></li>--}}
+                    {{--<li class="dropdown">--}}
+                        {{--<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>--}}
+                        {{--<ul class="dropdown-menu">--}}
+                            {{--<li><a href="{{ url('CreateProject') }}">Create Project</a></li>--}}
+                            {{--<li><a href="#">Manage Projects</a></li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
+                    {{--<li class="dropdown">--}}
+                        {{--<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clients <span class="caret"></span></a>--}}
+                        {{--<ul class="dropdown-menu">--}}
+                            {{--<li><a href="{{ route('clients.create') }}">Create Client</a></li>--}}
+                            {{--<li><a href="{{ route('clients.index') }}">Manage Clients</a></li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
+                    {{--<li class="dropdown">--}}
+                        {{--<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>--}}
+                            {{--<ul class="dropdown-menu">--}}
+                                {{--<li><a href="#">Overview</a></li>--}}
+                                {{--<li><a href="#">Edit Account</a></li>--}}
+                            {{--</ul>--}}
+                    {{--</li>--}}
+                    {{--<li><a href="{{ url('/UserGuide') }}">User Guide</a></li>--}}
+                    {{--<li><a href="{{ url('/About') }}">About</a></li>--}}
+                {{--</ul>--}}
 
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                You are logged in as {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
+                {{--<!-- Right Side Of Navbar -->--}}
+                {{--<ul class="nav navbar-nav navbar-right">--}}
+                    {{--<!-- Authentication Links -->--}}
+                    {{--@if (Auth::guest())--}}
+                        {{--<li><a href="{{ url('/login') }}">Login</a></li>--}}
+                        {{--<li><a href="{{ url('/register') }}">Register</a></li>--}}
+                    {{--@else--}}
+                        {{--<li class="dropdown">--}}
+                            {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">--}}
+                                {{--You are logged in as {{ Auth::user()->name }} <span class="caret"></span>--}}
+                            {{--</a>--}}
 
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                            </ul>
-                        </li>
-                    @endif
-                </ul>
-            </div>
+                            {{--<ul class="dropdown-menu" role="menu">--}}
+                                {{--<li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>--}}
+                            {{--</ul>--}}
+                        {{--</li>--}}
+                    {{--@endif--}}
+                {{--</ul>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</nav>--}}
+
+    <div class="sidebar">
+        <div class="burger-menu">
+            <p>&#9776</p>
         </div>
-    </nav>
+        <div class="logo">
+            <h1>ProjectM</h1>
+        </div>
+        <ul>
+            <li><a href="{{ url('/') }}"><h3>HOME</h3></a></li>
+            <li><span class="clickProjects"><h3>PROJECTS</h3></span>
+                <ul class="dropdownProjects">
+                    <li><a href="{{ route('projects.create') }}">Create Project</a></li>
+                    <li><a href="{{ route('projects.index') }}">Manage Projects</a></li>
+                </ul>
+            </li>
+            <li><span class="clickClients"><h3>CLIENTS</h3></span>
+                <ul class="dropdownClients">
+                    <li><a href="{{ route('clients.create') }}">Create Client</a></li>
+                    <li><a href="{{ route('clients.index') }}">Manage Clients</a></li>
+                </ul>
+            </li>
+            <li><span class="clickAccount"><h3>ACCOUNT</h3></span>
+                <ul class="dropdownAccount">
+                    <li><a href="#">Manage Account</a></li>
+                    <li><a href="#">Edit Details</a></li>
+                </ul>
+            </li>
+            <li><a href="{{ url('/UserGuide') }}"><h3>USER GUIDE</h3></a></li>
+            <li><a href="{{ url('/About') }}"><h3>ABOUT</h3></a></li>
+        </ul>
+        <div class="login">
+
+        </div>
+    </div>
+
+    <div class="top-bar">
+        <div id="user">
+            <p>Hello {{ Auth::user()->name }}!</p>
+        </div>
+        <a href="{{ url('/logout') }}" value="Logout">Logout</a>
+    </div>
+
+    <div class="content">
 
     @yield('content')
 
+    </div>
+
     <!-- JavaScripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+    {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>--}}
+    {{--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>--}}
 
             <!-- JQuery UI -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -117,6 +162,26 @@
                     $(".createClient").toggle();
                 }
             });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.clickProjects').click(function(){
+                $('.dropdownProjects').slideToggle();
+            });
+            $('.clickClients').click(function(){
+                $('.dropdownClients').slideToggle();
+            });
+            $('.clickAccount').click(function(){
+                $('.dropdownAccount').slideToggle();
+            });
+
+            $('.burger-menu').click(function(){
+                $('.sidebar').toggleClass('animation');
+                $('.content').toggleClass('contentAnimation');
+                $('.top-bar').toggleClass('topBarAnimation')
+            });
+
         });
     </script>
 
