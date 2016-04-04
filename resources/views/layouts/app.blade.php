@@ -9,7 +9,6 @@
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
 
     <link href="/css/app.css" rel="stylesheet" type="text/css">
@@ -93,7 +92,7 @@
             <h1>ProjectM</h1>
         </div>
         <ul>
-            <li><a href="{{ url('/') }}"><h3>HOME</h3></a></li>
+            <li><a href="{{ url('/') }}"><h3>DASHBOARD</h3></a></li>
             <li><span class="clickProjects"><h3>PROJECTS</h3></span>
                 <ul class="dropdownProjects">
                     <li><a href="{{ route('projects.create') }}">Create Project</a></li>
@@ -124,32 +123,18 @@
         <div id="user">
             <p>Hello {{ Auth::user()->name }}!</p>
         </div>
-        <a href="{{ url('/logout') }}" value="Logout">Logout</a>
+        <a href="{{ url('/logout') }}" class="buttons">Logout</a>
     </div>
 
-    <div class="content">
+    <div class="contentMain">
 
     @yield('content')
 
     </div>
 
-    <!-- JavaScripts -->
-    {{--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>--}}
-    {{--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>--}}
-
             <!-- JQuery UI -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script>
-        $(function() {
-            $( ".datepicker" ).datepicker({
-                changeMonth: true,
-                changeYear: true,
-                showButtonPanel: true
-            });
-        });
-
         $(document).ready(function(){
             $(".createClient").click(function(){
                 $("#form").slideDown();
@@ -166,22 +151,13 @@
     </script>
     <script>
         $(document).ready(function(){
-            $('.clickProjects').click(function(){
-                $('.dropdownProjects').slideToggle();
-            });
-            $('.clickClients').click(function(){
-                $('.dropdownClients').slideToggle();
-            });
-            $('.clickAccount').click(function(){
-                $('.dropdownAccount').slideToggle();
+            $('.sidebar > ul > li span').click(function(){
+                $(this).siblings('ul').slideToggle();
             });
 
             $('.burger-menu').click(function(){
                 $('.sidebar').toggleClass('animation');
-                $('.content').toggleClass('contentAnimation');
-                $('.top-bar').toggleClass('topBarAnimation')
             });
-
         });
     </script>
 

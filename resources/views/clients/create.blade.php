@@ -2,10 +2,7 @@
 
 @section('content')
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 panels">
-                <div class="panel panel-default projdets">
+    <div class="create">
 
                     <H1>Create New Client</H1>
                     <hr>
@@ -27,11 +24,9 @@
                         {{ Form::label('vat_no', 'Vat No.') }}
                         {{ Form::text('vat_no', null, array('class' => 'form-control')) }}
 
-                        {{ Form::submit('Create Client') }}
+                        {{ Form::submit('Create Client', array('class' => 'submit')) }}
                     {!! Form::close() !!}
-                </div>
-            </div>
-        </div>
+
     </div>
 
 @endsection

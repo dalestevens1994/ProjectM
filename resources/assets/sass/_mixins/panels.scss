@@ -1,14 +1,9 @@
 @mixin panel($color, $height, $width){
 	background-color: $color;
-	border-radius: 10px;
+	border-radius: 4px;
 	height: $height;
 	width: $width;
 	display: block;
-
-
-	h1,h2,h3,h4,h5,p {
-		color: white;
-	}
-
-
+	padding: 10px;
+	border: 1px solid #E0E0E0;
 }

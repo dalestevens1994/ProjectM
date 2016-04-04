@@ -70,7 +70,7 @@ LOGIN PAGE
     height: 50px;
     border: none;
     box-sizing: border-box;
-    background-color: $white;
+    background-color: white;
     margin-bottom: 5px;
 
     &:nth-child(2){
@@ -112,7 +112,7 @@ LOGIN PAGE
     margin-top: 10px;
     float: right;
     display: block;
-    @include buttons(#009CE1, 3px, white, none);
+    @include buttons(#009CE1, 3px, white);
   }
 
   .submit:hover {

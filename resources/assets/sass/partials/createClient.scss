@@ -1,0 +1,22 @@
+.create {
+
+  @include panel(white, 100%, 100%);
+
+  >h1 {
+    color: #636363;
+  }
+
+  .submit {
+    @include buttons($primary, 4px, white);
+    height: 36px;
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+
+    &:hover {
+      background-color: $primary-hover;
+    }
+  }
+
+
+}

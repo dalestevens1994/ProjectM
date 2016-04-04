@@ -1,8 +1,9 @@
-@mixin buttons($bcolor, $radius, $color, $border){
+@mixin buttons($bcolor, $radius, $color){
 	background-color: $bcolor;
 	border-radius: $radius;
 	color: $color;
-	border: $border;
-
+	border: 0;
+	outline: 0;
+	height: 36px;
 }
 

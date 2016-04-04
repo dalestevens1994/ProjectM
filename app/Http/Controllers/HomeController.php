@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use App\Project;
+use App\Client;
 
 class HomeController extends Controller
 {
@@ -24,6 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $project = Project::all();
+        $client = Client::all();
+        return view('dashboard')->with('project', $project, 'client', $client);
     }
 }

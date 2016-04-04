@@ -19,7 +19,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        // Store all the client records in the 'cilent' variable
+        // Store all the client records in the 'client' variable
         $client = Client::all();
         // Return the view containing all the client information from the database
         return view('clients.index')->with('client', $client);
