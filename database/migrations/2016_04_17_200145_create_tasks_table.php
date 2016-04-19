@@ -20,8 +20,7 @@ class CreateTasksTable extends Migration
             $table->date('expected_end_date');
             $table->date('actual_start_date');
             $table->date('actual_end_date');
-            $table->string('status');
-            $table->integer('user_id');
+            $table->integer('project_id');
             $table->timestamps();
         });
     }

@@ -4,65 +4,52 @@
 
     @include('partials.messages')
 
-    <h1>{{ $project->project_name }}</h1>
-    <H4>Project Manager</H4>
+    <div class="projectProgress">
+        <div class="projectInfo">
+            <h1> Project: {{ $project->project_name }}</h1>
+            <a href="{{ route('projects.edit', $project->id) }}" class="buttons">Edit</a>
+            <h3> Project Manager: ...</h3>
+            <p>Project Description: {{ $project->project_desc }}</p>
+        </div>
 
-                    <h1>{{ $project->project_desc }}</h1>
-                    <Hr>
-                    <h1>{{ $project->expected_start_date }}</h1>
-                    <Hr>
-                    <h1>{{ $project->expected_end_date }}</h1>
-                    <hr>
-                    <h1>{{ $project->client_id }}</h1>
-
-                    {!! Form::open(['route' => ['projects.destroy', $project->id], 'method' => 'DELETE']) !!}
-
-                    {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
-
-                    {!! Form::close() !!}
-
-
-    <div class="activeProjects">
-        <H1>Dashboard</H1>
-        <div class="projects-wrapper">
-            <h4>Active Projects</h4>
-            <div class="project">
-                <Ul>
-                    <li><a>Project Name<br>
-                            Project Description<br>
-                            Project Manager<br>
-                            Clients</a></li>
-                    <li><a>Project Name<br>
-                            Project Description<br>
-                            Project Manager<br>
-                            Clients</a></li>
-                    <li><a>Project Name<br>
-                            Project Description<br>
-                            Project Manager<br>
-                            Clients</a></li>
-                    <li><a>Project Name<br>
-                            Project Description<br>
-                            Project Manager<br>
-                            Clients</a></li>
-                    <li><a>Project Name<br>
-                            Project Description<br>
-                            Project Manager<br>
-                            Clients</a></li>
-                </Ul>
+        <div class="progressCircles">
+            <span>Overall Progress:  {{ $project['progress'] }}</span>
+            <div id="project_name" class="progress-wrap progress" data-progress-percent="{{ $project['progress'] }}">
+                <div class="progress-bar progress"></div>
+            </div>
+            <span>Stage Progress: 60%</span>
+            <div id="stage_name" class="progress-wrap progress" data-progress-percent="60">
+                <div class="progress-bar progress"></div>
             </div>
         </div>
     </div>
-    <div class="activityFeed-wrapper">
-        <h4>Recent Activity</h4>
-        <div class="activityFeed">
 
-        </div>
+    <div class="projectTasks">
+        <h4>Tasks</h4>
+        @foreach ($project->tasks as $task)
+            <p>{{ $task->task_name }}</p>
+        @endforeach
+        <a href="{{ route('projects.tasks.create', $project->id) }}" class="buttons">+</a>
     </div>
-    <div class="discussionBoard-wrapper">
-        <h4>Discussion Board</h4>
-        <div class="discussionBoard">
 
-        </div>
+    <div class="activityFeed">
+        <H4>Activity</H4>
+    </div>
+
+    <div class="projectMembers">
+        <h4>Users</h4>
+
+        @foreach ($project->users as $user)
+            <div class="member">
+                <p><a href="">{{ $user->name }}</a></p>
+            </div>
+        @endforeach
+
+    </div>
+
+    <div class="clientInfo">
+        <h4>Client</h4>
+        <a href="{{ route('clients.show', $project->client->id) }}"><p>{{ $project->client->name }}</p></a>
     </div>
 
 @endsection

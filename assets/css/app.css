@@ -5888,7 +5888,15 @@ h1, h2, h3, h4, h5, h6 {
   margin: 7px 0px;
   text-align: center;
   padding: 8px 0px;
-  text-decoration: none; }
+  text-decoration: none;
+  background-color: #009CE3;
+  border-radius: 3px;
+  color: white;
+  border: 0;
+  outline: 0;
+  height: 36px;
+  width: auto;
+  padding: 8px; }
 
 .buttons:hover {
   background-color: #0089C4;
@@ -5961,7 +5969,7 @@ h3 {
   display: table-cell;
   vertical-align: middle;
   text-decoration: none;
-  color: white;
+  color: white !important;
   padding-left: 40px; }
 
 .sidebar ul li:hover {
@@ -6039,8 +6047,9 @@ h3 {
     border: 0;
     outline: 0;
     height: 36px;
+    width: auto;
+    padding: 8px;
     height: 36px;
-    width: 100px;
     margin: 0 auto;
     display: block; }
     .create .submit:hover {
@@ -6090,10 +6099,7 @@ label {
   width: 100%;
   margin-bottom: 5px; }
 
-.projdets {
-  padding: 20px; }
-
-#form {
+.hide {
   display: none; }
 
 /*-----------------------------------------
@@ -6104,66 +6110,64 @@ DASHBOARD
 .activeProjects {
   height: 300px; }
   .activeProjects > h1, .activeProjects h4 {
-    color: #636363;
+    color: #636363 !important;
     margin: 0px;
     padding: 0px; }
 
 .project ul li {
-  height: 200px;
+  height: 150px;
   background-color: white;
   border: 1px solid #E0E0E0;
   width: 20%;
+  min-width: 200px;
   float: left;
   padding: 10px;
   boz-sizing: border-box;
-  list-style: none; }
+  list-style: none;
+  text-align: center; }
 .project li:hover {
   box-shadow: 0 2px 9px rgba(0, 0, 0, 0.15);
+  border-right: 5px solid #009CE3;
   cursor: pointer; }
 .project ul li a {
   text-decoration: none;
   color: #636363; }
 
-.projects-wrapper {
-  margin-top: 20px; }
-
-.activityFeed-wrapper {
-  width: 58%;
-  float: left;
-  margin-top: 10px; }
-
-.activityFeed {
-  width: 100%;
-  height: 300px;
-  background-color: white;
-  padding: 10px;
-  margin-top: 10px;
-  border: 1px solid #E0E0E0; }
-
-.discussionBoard-wrapper {
-  width: 40%;
-  float: right;
-  margin-top: 10px; }
-
-.discussionBoard {
-  width: 100%;
-  height: 300px;
-  float: right;
-  margin-top: 10px;
-  background-color: white;
-  padding: 10px;
-  border: 1px solid #E0E0E0; }
-
-.index {
+.editClient {
   background-color: white;
   border-radius: 4px;
-  height: 100%;
+  height: 340px;
   width: 100%;
   display: block;
   padding: 10px;
   border: 1px solid #E0E0E0; }
+  .editClient .buttons {
+    background-color: #009CE3;
+    border-radius: 3px;
+    color: white;
+    border: 0;
+    outline: 0;
+    height: 36px;
+    width: auto;
+    padding: 8px; }
+    .editClient .buttons:hover {
+      background-color: #0071A5; }
+
+.index {
+  margin-bottom: 20px !important; }
   .index > h1 {
     color: #636363; }
+
+.client {
+  float: left;
+  min-width: 200px;
+  background-color: white;
+  border-radius: 4px;
+  height: 100px;
+  width: 200px;
+  display: block;
+  padding: 10px;
+  border: 1px solid #E0E0E0; }
 
 /*-----------------------------------------
 
@@ -6255,8 +6259,150 @@ LOGIN PAGE
   color: white;
   border: 0;
   outline: 0;
-  height: 36px; }
+  height: 36px;
+  width: auto;
+  padding: 8px; }
 .button .submit:hover {
   cursor: pointer; }
+
+.clientDetails {
+  margin-bottom: 20px;
+  color: #636363;
+  background-color: white;
+  border-radius: 4px;
+  height: auto;
+  width: 100%;
+  display: block;
+  padding: 10px;
+  border: 1px solid #E0E0E0; }
+  .clientDetails h1, .clientDetails h2 {
+    color: #636363;
+    float: left; }
+  .clientDetails .buttons {
+    float: left;
+    margin: 0px 10px; }
+  .clientDetails .title {
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px; }
+
+.clientProjects {
+  float: left;
+  color: #636363;
+  background-color: white;
+  border-radius: 4px;
+  height: auto;
+  width: 70%;
+  display: block;
+  padding: 10px;
+  border: 1px solid #E0E0E0; }
+  .clientProjects h2 {
+    color: #636363; }
+
+.clientAccounts {
+  color: #636363;
+  float: left;
+  background-color: white;
+  border-radius: 4px;
+  height: auto;
+  width: 30%;
+  display: block;
+  padding: 10px;
+  border: 1px solid #E0E0E0; }
+  .clientAccounts h2 {
+    color: #636363; }
+
+.projectProgress {
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 4px;
+  height: 220px;
+  width: 100%;
+  display: block;
+  padding: 10px;
+  border: 1px solid #E0E0E0; }
+  .projectProgress .projectInfo {
+    float: left;
+    width: 40%; }
+    .projectProgress .projectInfo h1 {
+      color: #636363 !important; }
+  .projectProgress .progressCircles {
+    width: 60%;
+    float: right; }
+
+.projectTasks {
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 4px;
+  height: 300px;
+  width: 100%;
+  display: block;
+  padding: 10px;
+  border: 1px solid #E0E0E0; }
+  .projectTasks > h4 {
+    text-align: center; }
+
+.activityFeed {
+  float: left;
+  display: block;
+  background-color: white;
+  border-radius: 4px;
+  height: auto;
+  width: 50%;
+  display: block;
+  padding: 10px;
+  border: 1px solid #E0E0E0; }
+  .activityFeed > h4 {
+    text-align: center; }
+
+.projectMembers {
+  float: left;
+  display: block;
+  background-color: white;
+  border-radius: 4px;
+  height: auto;
+  width: 20%;
+  display: block;
+  padding: 10px;
+  border: 1px solid #E0E0E0; }
+  .projectMembers > h4 {
+    text-align: center; }
+  .projectMembers .member {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #E0E0E0;
+    text-align: center;
+    display: table; }
+    .projectMembers .member p {
+      display: table-cell;
+      vertical-align: middle; }
+
+.clientInfo {
+  float: left;
+  display: block;
+  background-color: white;
+  border-radius: 4px;
+  height: auto;
+  width: 30%;
+  display: block;
+  padding: 10px;
+  border: 1px solid #E0E0E0; }
+  .clientInfo > h4 {
+    text-align: center; }
+
+.progress {
+  height: 8px; }
+
+.progress-wrap {
+  background: #353535;
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative; }
+  .progress-wrap .progress-bar {
+    background: #009CE3;
+    left: 0;
+    position: absolute;
+    top: 0; }
 
 /*# sourceMappingURL=app.css.map */

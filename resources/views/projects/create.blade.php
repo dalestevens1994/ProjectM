@@ -24,21 +24,16 @@
         <hr>
 
         {{ Form::label('client_id', 'Client') }}
-        {{ Form::select('client_id', $client) }}
+        {{ Form::select('client_id', $project['clients']) }}
 
         <hr>
 
-        {{--{{ Form::label('objective_name', 'Objective') }}--}}
-        {{--{{ Form::text('objective_name', null, array('class' => 'form-control')) }}--}}
-
-        {{--{{ Form::label('objective_desc', 'Objective Description') }}--}}
-        {{--{{ Form::text('objective_desc', null, array('class' => 'form-control')) }}--}}
-
-        {{--{{ Form::label('expected_start_date_obj', 'Expected Objective Start Date') }}--}}
-        {{--{{ Form::date('expected_start_date_obj', null, array('class' => 'form-control')) }}--}}
-
-        {{--{{ Form::label('expected_end_date_obj', 'Expected Objective End Date') }}--}}
-        {{--{{ Form::date('expected_end_date_obj', null, array('class' => 'form-control')) }}--}}
+        {{ Form::label('user_id', 'Select Users') }}
+        {{ Form::select(
+            'user_id[]',
+            $project['users'],
+            null,
+            ['id' => 'users', 'multiple' => true, 'id' => 'user-multiple-selected']) }}
 
         <hr>
 

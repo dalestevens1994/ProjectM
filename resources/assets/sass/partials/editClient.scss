@@ -1,0 +1,12 @@
+.editClient {
+
+  .buttons {
+    @include buttons ($primary, 3px, white);
+
+    &:hover {
+      background-color: $primary-hover;
+    }
+  }
+
+  @include panel(white, 340px, 100%)
+}

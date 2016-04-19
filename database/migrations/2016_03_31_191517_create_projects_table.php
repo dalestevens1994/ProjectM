@@ -21,6 +21,7 @@ class CreateProjectsTable extends Migration
             $table->date('actual_end_date')->nullable();
             $table->longText('project_desc');
             $table->integer('client_id');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

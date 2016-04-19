@@ -6,6 +6,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Project;
 use App\Client;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -28,6 +29,7 @@ class HomeController extends Controller
     {
         $project = Project::all();
         $client = Client::all();
-        return view('dashboard')->with('project', $project, 'client', $client);
+        $user = User::all();
+        return view('dashboard')->with('project', $project, 'client', $client, 'user', $user);
     }
 }

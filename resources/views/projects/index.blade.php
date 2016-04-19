@@ -2,30 +2,20 @@
 
 @section('content')
 
+    @include('partials.messages')
     <div class="index">
-        @include('partials.messages')
-
         <h1>Manage Projects</h1>
-        <Hr>
-        <div>
-            <table class="table">
-                <tbody>
-                @foreach ($project as $projects)
+    </div>
 
-                    <tr>
-                        <td>{{ $projects->project_name }}</td>
-                        <td>
-                            <a href="{{ route('projects.show', $projects->id) }}" class="buttons">View</a>
-                        </td>
-                        <td>
-                            <a href="{{ route('projects.edit', $projects->id) }}" class="buttons">Edit</a>
-                        </td>
-                    </tr>
+    <div>
+        @foreach ($project as $project)
 
-                @endforeach
-                </tbody>
-            </table>
-        </div>
+            <a href="{{ route('projects.show', $project->id) }}"><li class="client">
+                    <h4>Project: {{ $project->project_name }}</h4>
+                    <h5>Client: {{ $project->client->name }}</h5>
+                </li></a>
+
+        @endforeach
     </div>
 
 @endsection

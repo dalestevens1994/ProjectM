@@ -1,7 +1,17 @@
 .index {
-  @include panel(white, 100%, 100%);
+
+  margin-bottom: 20px !important;
 
   >h1 {
     color: $text-color;
   }
+
+}
+
+.client {
+
+  float: left;
+  min-width: 200px;
+
+  @include panel(white, 100px, 200px);
 }

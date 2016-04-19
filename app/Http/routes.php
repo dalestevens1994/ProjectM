@@ -11,7 +11,8 @@
 |
 */
 
-
+use App\User;
+use App\Project;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,18 +29,26 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::post('/login', 'AuthController@create');
 
-    Route::get('uikit', function () {
-        return view('uikit');
-    });
-
-    Route::get('CreateProject', function(){
-        return view('createProject');
-    });
-
     // RESTFUL resource
     Route::resource('clients', 'ClientController');
 
     Route::resource('projects', 'ProjectController');
+
+    Route::resource('projects.tasks', 'TaskController');
+    Route::resource('tasks', 'TaskController');
+
+//    Route::get('/tasks/create/{$id}', 'TaskController@create');
+
+//    Route::get('/tasks/{id}', ['as' => 'tasks.create', 'uses' => 'TaskController@create']);
+
+//    Route::get('AddUsers', ['as' => 'addusers', function($id){
+//        $project = Project::find($id);
+//        return view('AddUsers')->with('project', $project);
+//    }]);
+
+    Route::get('/user/{name}', [
+        'as' => 'profile.index', 'uses' => 'ProfileController@getProfile'
+    ]);
 
     Route::get('UserGuide', function(){
         return view('userGuide');

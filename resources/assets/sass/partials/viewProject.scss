@@ -1,0 +1,98 @@
+.projectProgress {
+
+  margin-bottom: 20px;
+
+  .projectInfo {
+    float: left;
+    width: 40%;
+
+    & h1 {
+      color: $text-color !important;
+    }
+  }
+
+  .progressCircles {
+    width: 60%;
+    float: right;
+  }
+
+  @include panel(white, 220px, 100%);
+}
+
+.projectTasks {
+
+  margin-bottom: 20px;
+
+  >h4 {
+    text-align: center;
+  }
+
+  @include panel(white, 300px, 100%)
+}
+
+.activityFeed {
+
+  float: left;
+  display: block;
+
+  >h4 {
+    text-align: center;
+  }
+
+  @include panel(white, auto, 50%);
+}
+
+.projectMembers {
+
+  float: left;
+  display: block;
+
+  >h4 {
+    text-align: center;
+  }
+
+  .member {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #E0E0E0;
+    text-align: center;
+    display: table;
+    
+    & p {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  @include panel(white, auto, 20%);
+
+}
+
+.clientInfo {
+
+  float: left;
+  display: block;
+
+  >h4 {
+    text-align: center;
+  }
+
+  @include panel(white, auto, 30%);
+}
+
+.progress {
+  height: 8px;
+}
+.progress-wrap {
+  background: $background;
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+  .progress-bar {
+    background: $primary;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
